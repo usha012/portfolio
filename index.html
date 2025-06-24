@@ -28,6 +28,20 @@
     <!-- main CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
 
+    <script>
+        function filterItems(category) {
+            const items = document.querySelectorAll('.items'); // All items
+            items.forEach(item => {
+                item.classList.remove('show'); // Hide all items first
+                if (category === 'all' || item.classList.contains(category)) {
+                item.classList.add('show'); // Show only matching items
+                }
+            });
+        }
+    </script>
+
+    
+
 </head>
 
 <body data-spy="scroll" data-target="#scrollspy" data-offset="1">
@@ -95,7 +109,7 @@
                 <div class="row ">
                     <div class="col-lg-12 ">
                         <!--social-media-->
-                        <!-- <div class="social-home">
+                        <div class="social-home">
                             <ul class="list-inline">
                                     <li>
                                         <a href="#">
@@ -103,6 +117,11 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="https://www.linkedin.com/in/usha-dev/">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    <!-- <li>
                                         <a href="#">
                                             <i class="fab fa-twitter"></i>
                                         </a>
@@ -116,14 +135,14 @@
                                         <a href="#">
                                             <i class="fab fa-dribbble"></i>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <a href="#">
                                             <i class="fab fa-behance "></i>
                                         </a>
                                     </li>
                             </ul>
-                        </div> -->
+                        </div>
 
                         <div class="d-flex align-items-center vh-100">
                             <div class="full-width">
@@ -160,7 +179,7 @@
                         
                             <div class="item">
                                 <p class="font-w-700  mb-0">Location</p>
-                                <p class="mb-0">Gurugram, HR</p>
+                                <p class="mb-0">Noida, (U.P)</p>
                             </div>
                         </div>
                      </div> 
@@ -190,8 +209,11 @@
                      <div class="col-lg-7 d-flex align-items-center">
                         <div class="details">
                             <h5>Hello there, I'm Usha</h5>
-                            <p class="mb-25">
+                            <!-- <p class="mb-25">
                                 Frontend Developer with extensive experience in React.js and Redux, specializing in dynamic, responsive web applications. Skilled in HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, Next.js, SASS, and Material-UI. Proven ability to enhance user experience and functionality.
+                            </p> -->
+                            <p class="mb-25">
+                                I'm a UI/UX professional with 3 years of experience in creating responsive and reusable components using React.js, Next.js, JavaScript, CSS, SASS, and Bootstrap. I have hands-on experience in UX design using Figma, from wireframes to final UI. I'm passionate about building user-friendly, clean, and accessible digital products, and enjoy working with teams that value collaboration, creativity, and continuous learning.
                             </p>
                        
                             <!--about info-->
@@ -201,9 +223,9 @@
                                 <li><span>Date of birth :</span> 03-09-1996</li>
                                 <li><span>Email :</span><a href="mailto:usha852701@gmail.com">usha852701@gmail.com</a></li>
                                 <li><span>Nationality :</span> India</li>
-                                <li><span>Address :</span>Gurugram, HR</li>
-                                <li><span>Work Status :</span> Frontend Developer</li>
-                                <li><span>Freelancer :</span> Available</li>
+                                <li><span>Address :</span>Noida, U.P</li>
+                                <li><span>Work Status :</span> UI/UX Developer</li>
+                                <!-- <li><span>Freelancer :</span> Available</li> -->
                             </ul>
 
                             <a href="./Usha-Resume.pdf" target="_blank" class="btn-custom" download>
@@ -241,6 +263,47 @@
                     </div>
                 </div>
                 <!-- Timeline-->
+                   <div class="row ">
+                    <div class="col-lg-6">
+                        <h5 class="mb-30">My Experience</h5>
+                        <div class="timeline"> 
+                            <!--item 1-->
+                            <div class="item">
+                                <div class="content">
+                                    <h6 class="mb-0">UI Developer
+                                        <span class="text-muted"> - </span> Cliffex Software Solutions Pvt. Ltd.</h6>
+                                    <small class="text-muted">2022 - 2023</small>
+                                    <p class="pt-15 mb-0">
+                                        I specialize in building responsive and intuitive interfaces for web and mobile 
+                                        applications using HTML5, CSS3, SASS, JavaScript, React.js, and Next.js. 
+                                        I collaborate with UX designers to translate wireframes and prototypes into 
+                                        functional components, focusing on performance, accessibility, and cross-browser
+                                         compatibility, while staying current with modern front-end trends and best practices.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!--item 2-->
+                            <div class="item">
+                                <div class="content">
+                                    <h6 class="mb-0">UI Developer
+                                        <span class="text-muted"> - </span> Digisajilo </h6>
+                                    <small class="text-muted ">2019 - 2022</small>
+                                    <p class="pt-15 mb-0">
+                                        I code the front-end of websites using HTML, CSS, JavaScript, and Bootstrap, 
+                                        ensuring cross-browser compatibility for a seamless user experience. I design
+                                         and implement mobile-responsive layouts that adapt smoothly across devices. 
+                                         To enhance user engagement, I develop interactive elements such as forms, 
+                                         buttons, sliders, and carousels. Additionally, I integrate animations and 
+                                         transitions to create visually appealing and dynamic effects that elevate 
+                                         the overall user interface.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row ">
                     <div class="col-lg-6">
                         <h5 class="mb-30">My Education</h5>
@@ -250,7 +313,7 @@
                                 <div class="content">
                                     <h6 class="mb-0">BCA
                                         <span class="text-muted"> - </span> Amity University</h6>
-                                    <small class="text-muted">2019 - 2024</small>
+                                    <small class="text-muted">2019 - 2025</small>
                                     <!-- <p class="pt-15 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium aut repellendus rem non repudiandae
                                         sint dolor illo officia dignissimos.
                                     </p> -->
@@ -290,6 +353,7 @@
                         </div>
                     </div>
                 </div>
+              
             </div>
         </section>
 
@@ -306,7 +370,7 @@
                 </div>
                 <div class="row">
                     <!-- item -->
-                    <div class="col-sm-6 col-lg-4">
+                    <!-- <div class="col-sm-6 col-lg-4">
                         <div class="item">
                             <div class="circle">
                                <h2>01</h2>
@@ -314,11 +378,11 @@
                             <div class="content ">
                                 <h5 class="mt-15 mb-10">ReactJs Developer</h5>
                                 <p class="mb-0">
-                                    <!-- In a professional context it often happens that private clients corder a publication to be made. -->
+                                    In a professional context it often happens that private clients corder a publication to be made.
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- item -->
                     <div class="col-sm-6 col-lg-4">
                         <div class="item">
@@ -340,7 +404,7 @@
                                <h2>03</h2>
                             </div>
                             <div class="content ">
-                                <h5 class="mt-15 mb-10">NextJs Developer</h5>
+                                <h5 class="mt-15 mb-10">UX Designer</h5>
                                 <p class="mb-0">
                                     <!-- In a professional context it often happens that private clients corder a publication to be made. -->
                                 </p>
@@ -363,9 +427,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <button class="btn-custom" onClick="filterItems('ui')">UI</button>
+                        <button class="btn-custom"  onClick="filterItems('ux')">Ux</button>
+                        <button class="btn-custom"  onClick="filterItems('all')">all</button>
+
+
+                    </div>
+
+                </div>
                 <!--works-items -->
                 <div class="row works-items">
-                    <div class="col-lg-4 col-md-6 mb-15 rounded">
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
                         <!--1-item -->
                         <div class="item shadow rounded">
                             <div class="image rounded">
@@ -376,7 +450,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-15 rounded">
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
                         <!--item -->
                         <div class="item shadow rounded">
                             <div class="image rounded">
@@ -387,7 +461,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-15 rounded">
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
                         <!--2-item -->
                         <div class="item shadow rounded">
                             <div class="image rounded">
@@ -398,7 +472,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-15 rounded">
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
                         <!--3-item -->
                         <div class="item shadow rounded">
                             <div class="image rounded">
@@ -409,13 +483,112 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-15 rounded">
-                        <!--item -->
+                    <!-- <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
+                        item
                         <div class="item shadow rounded">
                             <div class="image rounded">
                                 <img src="assets/img/usha-portfolio-image.png" alt="">
                                 <div class="overly">
                                     <a href="https://portfolio-phi-ruddy.vercel.app/" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/indifolio_img.png" alt="">
+                                <div class="overly">
+                                    <a href="https://home.indiefolio.com/" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/mash_img.png" alt="">
+                                <div class="overly">
+                                    <a href="https://thisismash.com/" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/padicure_img.png" alt="">
+                                <div class="overly">
+                                    <a href="https://www.pedicurechristel.be/" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ux">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/ux_img1.png" alt="">
+                                <div class="overly">
+                                    <a href="https://www.figma.com/design/8klPBX3KUH09zaACfQLpq0/practice-UX?node-id=108-86&t=PDA8epUF5Hy7WUfv-1" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ux">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/ux_img2.png" alt="">
+                                <div class="overly">
+                                    <a href="https://www.figma.com/proto/8klPBX3KUH09zaACfQLpq0/practice-UX?node-id=439-372&p=f&t=XZ9BJqyOoAOY5j3z-1&scaling=scale-down&content-scaling=fixed&page-id=410%3A244" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ux">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/ux_img3.png" alt="">
+                                <div class="overly">
+                                    <a href="https://www.figma.com/design/8klPBX3KUH09zaACfQLpq0/practice-UX?node-id=178-243&t=9xNV9V9j4qcROl34-1" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ux">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/ux_img4.png" alt="">
+                                <div class="overly">
+                                    <a href="https://www.figma.com/design/kKxdHTUVJKuJ1aXMN8EgGb/app?node-id=70-218&t=PDA8epUF5Hy7WUfv-1" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ux">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/ux_img5.png" alt="">
+                                <div class="overly">
+                                    <a href="https://www.figma.com/design/kKxdHTUVJKuJ1aXMN8EgGb/app?node-id=0-1&t=PDA8epUF5Hy7WUfv-1" target="_blank" class="view-btn"> View Work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-15 rounded show items ui">
+                        <!--item -->
+                        <div class="item shadow rounded">
+                            <div class="image rounded" height="100">
+                                <img src="assets/img/versel_img.png" alt="">
+                                <div class="overly">
+                                    <a href="https://visceral.io/home" target="_blank" class="view-btn"> View Work</a>
                                 </div>
                             </div>
                         </div>
@@ -437,11 +610,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <!-- <div class="col-lg-6">
                         <form action="#" id="main_contact_form" class="form contact_form ">
-                            <!-- <div class="alert alert-success contact_msg " style="display: none" role="alert">
+                            <div class="alert alert-success contact_msg " style="display: none" role="alert">
                                 Your message was sent successfully.
-                            </div>        -->
+                            </div>       
                             <div class="form-group">
                                 <input type="text" name="Name" id="name" class="form-control shadow-sm" placeholder="Name" required maxlength="50">
                             </div>
@@ -469,7 +642,7 @@
                             <h3>Submitted the form successfully!</h3>
                             <p>We will get back to you soon.</p>
                           </div>
-                    </div>
+                    </div> -->
                     <!--Contact -info -->
                     <div class="col-lg-6">
                         <h5 >Let's talk about everything!</h5>
@@ -487,7 +660,7 @@
                             </div>
                             <div class="item mb-20">
                                 <p class=" font-w-700 mb-0">Adress: </p>
-                                <p class="mb-0"><i class="fas fa-map-marker-alt base-color"> </i>Gurugram, Haryana</p>
+                                <p class="mb-0"><i class="fas fa-map-marker-alt base-color"> </i>Noida, (U.P)</p>
                             </div>
                             <!-- <div class="item">
                                 <p class="font-w-700 mb-0">Skybe: </p>

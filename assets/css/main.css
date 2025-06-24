@@ -1040,6 +1040,7 @@ ul {
 ------------------------------ */
 .works .item {
   margin-bottom: 30px;
+  HEIGHT: 200px;
   background-color: #ffffff;
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
@@ -1049,12 +1050,16 @@ ul {
 .works .item .image {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .works .item .image img {
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   border-radius: 5px 5px 0 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .works .item .image .overly {
@@ -1855,3 +1860,7 @@ ul {
     background-color: #0b0c10;
   }
 }
+
+
+.items { display: none; }
+.items.show { display: block; }
